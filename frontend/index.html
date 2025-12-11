@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Todos</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="app">
+    <h1>Lista de tareas</h1>
+
+    <div class="new-todo">
+      <input id="todoInput" type="text" placeholder="Escribe una nueva tarea y presiona Enter" />
+      <button id="addBtn" onclick="createTodo()">Agregar</button>
+    </div>
+
+    <div id="todoList" class="todo-list" aria-live="polite"></div>
+  </main>
+
+  <!-- Cargar el script después del DOM; NO usar type="module" -->
+  <script src="./script.js" defer></script>
+</body>
+</html>
