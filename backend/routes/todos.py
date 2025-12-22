@@ -44,11 +44,11 @@ def update_todo(todo_id: int, todo_data: TodoCreate, db: Session= Depends(get_db
     if not todo:
         raise HTTPException(status_code=404 , detail="Tarea no encontrada")
 
-        #3 Actualizar los campos 
-        #Asumimos que solo se puede actualizar el 'title'
-        todo.title = todo_data.title
+    #3 Actualizar los campos 
+    #Asumimos que solo se puede actualizar el 'title'
+    todo.title = todo_data.title
         
-        #4. Confirmar y refrescar 
+    #4. Confirmar y refrescar 
     db.commit()
     db.refresh(todo)
     return todo
